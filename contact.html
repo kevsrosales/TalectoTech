@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img class="logo" src="./img/logo.png" alt="logo">
+            <div class="nav-busqueda">
+                <input type="text" placeholder="Buscar productos">
+                <nav class="nav-header">
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="perros.html">Perros</a></li>
+                        <li><a href="gatos.html">Gatos</a></li>
+                        <li><a href="aves.html">Aves</a></li>
+                        <li><a href="ofertas.html"> Ofertas</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <form method="post">
+        <h2>Contacto</h2>
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" class="form_input" required placeholder="Tu nombre">
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" name="email" class="form_input" required placeholder="tucorreo@ejemplo.com">
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea name="mensaje" class="form_input" required placeholder="Escribí tu consulta..."></textarea>
+
+        <button type="submit" class="btn-enviar">Enviar</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2025 Tienda de Mascotas. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>
