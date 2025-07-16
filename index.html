@@ -4,70 +4,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo de productos</title>
-    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Tienda de Mascotas</title>
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
+
 <body>
     <header>
         <div class="header-container">
-            <img class="logo" src="./img/logo.png" alt="logo">
-            <div class="nav-busqueda">
-                <input type="text" placeholder="Buscar productos">
+            <img class="logo" src="img/logo.png" alt="logo">
+
+            <div class="nav-left">
+                <a href="login.html">Ingresar</a>
+                <a href="carrito.html">Carrito</a>
+            </div>
+            <div class="nav-center">
+                <input id="input-search-products" type="text" placeholder="Buscar productos">
                 <nav class="nav-header">
                     <ul>
+                        <li><a href="index.html">Inicio</a></li>
                         <li><a href="perros.html">Perros</a></li>
                         <li><a href="gatos.html">Gatos</a></li>
-                        <li><a href="aves.html">Aves</a></li>
-                        <li><a href="ofertas.html"> Ofertas</a></li>
+                        <li><a href="ofertas.html">Ofertas</a></li>
                         <li><a href="contact.html" class="nav-contacto">Contacto</a></li>
                     </ul>
                 </nav>
             </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </header>
 
-    <div class="container">
-        <main>
-            <h1>Productos destacados</h1>
+    <section class="hero-banner">
+        <img src="./img/banner.jpg" alt="Planet Shop" />
+    </section>
+    <section class="benefits-strip">
+        <img src="./img/mediosdepago.png" alt="Compra segura, medios de pago y envíos sin cargo" />
+    </section>
 
-            <div class="product-filters">
-                <label>
-                    <input type="checkbox" id="ofertas-checkbox">
-                    Ofertas
-                </label>
-                <label>
-                    <input type="checkbox" id="envios-checkbox">
-                    Envíos Gratis
-                </label>
-            </div>
-
-            <section class="product-grid">
-                <article class="product-card">
-                    <h3>Dog Selection</h3>
-                    <p>Precio: $30.000</p>
-                    <img src="./img/dogselection213.jpg" alt="Alimento-para-perros">
-                    <button>Comprar</button>
-                </article>
-                <article class="product-card">
-                    <h3>Purina Excellent kitten pollo y arroz</h3>
-                    <p>Precio: $12.000</p>
-                    <img src="./img/purita-excellent-para-gatos.webp" alt="Alimento-balacenado-para-gatos">
-                    <button>Comprar</button>
-                </article>
-                <article class="product-card">
-                    <h3>Bebedero fuente</h3>
-                    <p>Precio: $20.000</p>
-                    <img src="./img/bebedero-fuente.jpg" alt="bebedero-fuente">
-                    <button>Comprar</button>
-                </article>
-            </section>
-        </main>
-    </div>
+    <main class="container">
+        <h1>Catálogo de Productos</h1>
+        <div class="product-filters">
+            <label>
+                <input type="checkbox" id="ofertas-checkbox">
+                Ofertas
+            </label>
+            <label>
+                <input type="checkbox" id="envios-checkbox">
+                Envíos Gratis
+            </label>
+        </div>
+        <section class="product-grid" id="product-list">
+        </section>
+    </main>
 
     <footer>
         <p>&copy; 2025 Tienda de Mascotas. Todos los derechos reservados.</p>
-        <a href="./contact.html">Contacto</a>
+        <a href="contact.html">Contacto</a>
     </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-header ul');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
+
+    <script src="scripts/app.js"></script>
 </body>
 
 </html>

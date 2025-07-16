@@ -1,60 +1,74 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seccion de Perros</title>
-    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Tienda de Mascotas</title>
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
-<body>
+
+<body data-categoria="perros">
     <header>
         <div class="header-container">
-            <img src="./img/logo.png" alt="Logo">
-            <div class="nav-busqueda">
-                <input type="text" placeholder="Buscar productos">
+            <img class="logo" src="img/logo.png" alt="logo">
+
+            <div class="nav-left">
+                <a href="login.html">Ingresar</a>
+                <a href="carrito.html">Carrito</a>
+            </div>
+            <div class="nav-center">
+                <input id="input-search-products" type="text" placeholder="Buscar productos">
                 <nav class="nav-header">
                     <ul>
                         <li><a href="index.html">Inicio</a></li>
+                        <li><a href="perros.html">Perros</a></li>
                         <li><a href="gatos.html">Gatos</a></li>
-                        <li><a href="aves.html">Aves</a></li>
-                        <li><a href="ofertas.html"> Ofertas</a></li>
+                        <li><a href="ofertas.html">Ofertas</a></li>
                         <li><a href="contact.html" class="nav-contacto">Contacto</a></li>
                     </ul>
                 </nav>
             </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </header>
 
-    <div class="container">
-        <main>
-            <section class="product-grid">
-                <article class="product-card">
-                    <h3>Dog Selection</h3>
-                    <p>Alimento balancenado para perros Adultos</p>
-                    <p>Precio: $30.000</p>
-                    <img src="./img/dogselection213.jpg" alt="Alimento-para-perros">
-                    <button>Comprar</button>
-                </article>
-                <article class="product-card">
-                    <h3>Juguete para Perro de Goma</h3>
-                    <p>Hueso de goma dura</p>
-                    <p>Precio: $2.000</p>
-                    <img src="./img/juguete-hueso.jpg" alt="Hueso-de-goma">
-                    <button>Comprar</button>
-                </article>
-                <article class="product-card">
-                    <h3>Casa Cucha para perros</h3>
-                    <p>Casa para perro diseñada con el tamaño ideal para razas pequeñas</p>
-                    <p>Precio: $20.000</p>
-                    <img src="./img/cucha-para-perros.jpg" alt="Cucha-para-perros">
-                    <button>Comprar</button>
-                </article>
-            </section>
-        </main>
-    </div>
+    <main class="container">
+        <h1>Productos para Perros</h1>
+        <div class="product-filters">
+            <label>
+                <input type="checkbox" id="ofertas-checkbox">
+                Ofertas
+            </label>
+            <label>
+                <input type="checkbox" id="envios-checkbox">
+                Envíos Gratis
+            </label>
+        </div>
+
+        <section class="product-grid" id="product-list">
+
+        </section>
+    </main>
+
     <footer>
         <p>&copy; 2025 Tienda de Mascotas. Todos los derechos reservados.</p>
-        <a href="./contact.html">Contacto</a>
+        <a href="contact.html">Contacto</a>
     </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-header ul');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
 </body>
+<script src="./scripts/app.js"></script>
+
 </html>
