@@ -102,7 +102,7 @@ header {
     color: var(--amarillo);
 }
 
-/* Hamburguesa */
+/* --------------------Hamburguesa------------------ */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -297,7 +297,6 @@ h2 {
     border-radius: 4px;
 }
 
-
 /* -------------------- FOOTER -------------------- */
 footer {
     background-color: var(--violeta);
@@ -437,7 +436,7 @@ button:hover {
     background-color: #e6c200;
 }
 
-/* Banner */
+/* -----------------Banner------------------ */
 .hero-banner img {
     width: 100%;
     height: auto;
@@ -446,7 +445,7 @@ button:hover {
     margin-bottom: 0;
 }
 
-/* compra segura, pagos, envíos */
+/* -------compra segura, pagos, envíos------- */
 .benefits-strip {
     width: 100%;
     background-color: #fff;
@@ -459,7 +458,6 @@ button:hover {
     display: block;
     object-fit: contain;
 }
-
 
 /* ----------DETALLE DEL PRODUCTO-----------*/
 .detalle-producto {

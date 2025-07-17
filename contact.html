@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda de Mascotas</title>
+    <title>Contacto</title>
     <link rel="stylesheet" href="styles/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
@@ -13,11 +13,11 @@
     <header>
         <div class="header-container">
             <img class="logo" src="img/logo.png" alt="logo">
-
             <div class="nav-left">
                 <a href="login.html">Ingresar</a>
                 <a href="carrito.html">Carrito</a>
             </div>
+
             <div class="nav-center">
                 <input id="input-search-products" type="text" placeholder="Buscar productos">
                 <nav class="nav-header">
@@ -30,6 +30,7 @@
                     </ul>
                 </nav>
             </div>
+
             <div class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
@@ -37,10 +38,10 @@
             </div>
         </div>
     </header>
+
     <main>
         <h2>Contacto</h2>
         <form onsubmit="enviarConsulta(event)" class="form-contacto">
-
             <label for="nombre">Nombre:</label>
             <input type="text" name="nombre" class="form_input" required placeholder="Escriba tu nombre">
 
@@ -59,6 +60,7 @@
         <a href="contact.html">Contacto</a>
     </footer>
 
+    <!-- script de menu hamburguesa -->
     <script>
         const hamburger = document.querySelector('.hamburger');
         const navMenu = document.querySelector('.nav-header ul');
@@ -68,7 +70,8 @@
         });
     </script>
 
+    <script src="scripts/contact.js"></script>
+
 </body>
-<script src="scripts/contact.js"></script>
 
 </html>

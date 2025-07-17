@@ -5,6 +5,7 @@ function enviarConsulta(event) {
     const email = document.querySelector('input[name="email"]').value.trim();
     const mensaje = document.querySelector('textarea[name="mensaje"]').value.trim();
 
+    // mensaje nuevo
     Swal.fire({
         icon: 'success',
         title: 'Consulta enviada',
@@ -12,5 +13,5 @@ function enviarConsulta(event) {
         confirmButtonColor: '#3085d6'
     });
 
-    event.target.reset();
+    event.target.reset(); // Limpiar el formulario
 }

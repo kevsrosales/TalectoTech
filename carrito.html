@@ -4,15 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda de Mascotas</title>
+    <title>Carrito</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 </head>
 
 <body>
     <header>
         <div class="header-container">
             <img class="logo" src="img/logo.png" alt="logo">
-
             <div class="nav-left">
                 <a href="login.html">Ingresar</a>
                 <a href="carrito.html">Carrito</a>
@@ -39,26 +39,10 @@
         </div>
     </header>
 
-    <section class="hero-banner">
-        <img src="./img/banner.jpg" alt="Planet Shop" />
-    </section>
-    <section class="benefits-strip">
-        <img src="./img/mediosdepago.png" alt="Compra segura, medios de pago y envíos sin cargo" />
-    </section>
-
     <main class="container">
-        <h1>Catálogo de Productos</h1>
-        <div class="product-filters">
-            <label>
-                <input type="checkbox" id="ofertas-checkbox">
-                Ofertas
-            </label>
-            <label>
-                <input type="checkbox" id="envios-checkbox">
-                Envíos Gratis
-            </label>
-        </div>
-        <section class="product-grid" id="product-list">
+        <h1>Productos en carrito</h1>
+        <section class="carrito-grid" id="carrito-list">
+
         </section>
     </main>
 
@@ -76,7 +60,8 @@
         });
     </script>
 
-    <script src="scripts/app.js"></script>
+    <script src="scripts/carrito.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>
 

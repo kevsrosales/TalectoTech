@@ -60,8 +60,8 @@ function createProductCard(product) {
     img.alt = product.title;
 
     card.addEventListener('click', () => {
-        window.location.href = `detalle.html?id=${product.id}`;
-    });
+    window.location.href = `detalle.html?id=${product.id}`;
+});
 
     card.appendChild(title);
     card.appendChild(price);
@@ -155,4 +155,3 @@ addProductForm?.addEventListener('submit', async (e) => {
         alert('Hubo un error al crear el producto.');
     }
 });
-

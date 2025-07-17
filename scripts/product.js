@@ -37,6 +37,7 @@ const getProducts = async () => {
             description: item.fields.description || ''
         }));
 
+
         renderTableProducts(products);
     } catch (error) {
         console.error('Error al obtener productos:', error);
@@ -61,8 +62,8 @@ function renderTableProducts(list) {
         const actionTd = document.createElement('td');
         actionTd.innerHTML = `<button class="ver-detalle">Editar</button>`;
         actionTd.querySelector('button').addEventListener('click', () => {
-            window.location.href = `edit-product.html?id=${product.id}`;
-        });
+        window.location.href = `edit-product.html?id=${product.id}`;
+});
 
         row.appendChild(titleTd);
         row.appendChild(priceTd);
