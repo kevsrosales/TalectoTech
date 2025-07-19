@@ -79,10 +79,23 @@ function updateSubmit(event) {
         .then(data => {
             if (data.error) {
                 console.error(`Error detallado`, data);
-                alert(`Error al actualizar el producto (${data.error.type}): ${data.error.message}`);
+                Swal.fire({
+                    icon: 'error',
+                    title: `Error al actualizar`,
+                    text: `${data.error.message}`,
+                    confirmButtonColor: '#d33'
+                });
+                ;
             } else {
-                alert(`Producto actualizado con éxito.`);
-                window.location.href = './products.html';
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Actualizado',
+                    text: 'El producto fue modificado correctamente',
+                    confirmButtonColor: '#3085d6'
+                }).then(() => {
+                    window.location.href = './products.html';
+                });
+
             }
         })
         .catch(error => {

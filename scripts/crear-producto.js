@@ -40,11 +40,23 @@ document.getElementById('add-product-form').addEventListener('submit', async (e)
 
         if (!response.ok) throw new Error('Error al guardar en Airtable');
 
-        alert('Producto creado con éxito!');
-        window.location.href = "../admin/products.html";
+        Swal.fire({
+            icon: 'success',
+            title: '¡Éxito!',
+            text: 'Producto creado con éxito.',
+            confirmButtonColor: '#3085d6'
+        }).then(() => {
+            window.location.href = "../admin/products.html";
+        });
 
     } catch (error) {
         console.error(error);
-        alert('Error al crear el producto.');
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'No se pudo crear el producto. Reintentá más tarde.',
+            confirmButtonColor: '#d33'
+        });
+
     }
 });

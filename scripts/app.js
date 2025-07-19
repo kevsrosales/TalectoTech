@@ -4,7 +4,6 @@ const TABLE_NAME = 'Products';
 const API_URL = `https://api.airtable.com/v0/${BASE_ID}/${TABLE_NAME}`;
 
 let products = [];
-const carritoProducts = JSON.parse(localStorage.getItem('carrito')) || [];
 
 document.addEventListener("DOMContentLoaded", () => {
     getProducts();
@@ -79,7 +78,6 @@ function renderProducts(list) {
     });
 }
 
-
 function applyFilters() {
     let filtered = [...products];
 
@@ -114,44 +112,3 @@ function applyFilters() {
 searchInput?.addEventListener('input', applyFilters);
 offertCheckbox?.addEventListener('change', applyFilters);
 enviosCheckbox?.addEventListener('change', applyFilters);
-
-const btnAddProduct = document.getElementById('btn-add-product');
-const addProductForm = document.getElementById('add-product-form');
-const btnCancel = document.getElementById('btn-cancel');
-
-btnAddProduct?.addEventListener('click', () => {
-    addProductForm.style.display = 'block';
-    btnAddProduct.style.display = 'none';
-});
-
-btnCancel?.addEventListener('click', () => {
-    addProductForm.style.display = 'none';
-    btnAddProduct.style.display = 'block';
-    addProductForm.reset();
-});
-
-addProductForm?.addEventListener('submit', async (e) => {
-    e.preventDefault();
-
-    const newProduct = {
-        title: document.getElementById('title').value.trim(),
-        price: parseFloat(document.getElementById('price').value),
-        category: document.getElementById('category').value.trim().toLowerCase(),
-        image: document.getElementById('image').value.trim(),
-        description: document.getElementById('description').value.trim(),
-        offert: document.getElementById('offert').checked,
-        freeShipping: document.getElementById('freeShipping').checked
-    };
-
-    try {
-        await addToAirTable(newProduct);
-        alert('Producto creado con éxito!');
-        addProductForm.reset();
-        addProductForm.style.display = 'none';
-        btnAddProduct.style.display = 'block';
-        getProducts();
-    } catch (error) {
-        console.error('Error al crear producto:', error);
-        alert('Hubo un error al crear el producto.');
-    }
-});

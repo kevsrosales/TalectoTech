@@ -6,6 +6,7 @@ const API_URL = `https://api.airtable.com/v0/${BASE_ID}/${TABLE_NAME}`;
 const params = new URLSearchParams(window.location.search);
 const productId = params.get('id');
 
+
 if (!productId) {
     document.querySelector('.detalle-container').innerHTML = '<p>Producto no encontrado.</p>';
 } else {
