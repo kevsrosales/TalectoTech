@@ -41,9 +41,9 @@
 
     <main>
         <h2>Contacto</h2>
-        <form onsubmit="enviarConsulta(event)" class="form-contacto">
+        <form onsubmit="enviarConsulta(event)" action="https://formspree.io/f/xanbqqqj" method="POST" class="form-contacto">
             <label for="nombre">Nombre:</label>
-            <input type="text" name="nombre" class="form_input" required placeholder="Escriba tu nombre">
+            <input type="text" name="nombre" class="form_input" required placeholder="Escribí tu nombre">
 
             <label for="email">Correo electrónico:</label>
             <input type="email" name="email" class="form_input" required placeholder="tucorreo@ejemplo.com">
@@ -70,7 +70,6 @@
     </script>
 
     <script src="scripts/contact.js"></script>
-
 </body>
 
 </html>
