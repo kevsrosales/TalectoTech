@@ -12,8 +12,9 @@
 
 - **HTML5**
 - **CSS3**
-- **JavaScript (Vanilla)**
+- **JavaScript**
 - **Airtable (como backend de datos)**
+- **Formspree**
 - **SweetAlert2** (alertas modernas)
 - **LocalStorage** (para sesión y carrito)
 - **Git & GitHub**
